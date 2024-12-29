@@ -10,7 +10,7 @@ DATABASE_URL = "postgresql://postgres:anaiman@localhost:5432/msa_data"
 engine = create_engine(DATABASE_URL)
 
 # Fetch the stock price data from your database
-query = "SELECT last_transaction FROM ticker_data ORDER BY date DESC"
+query = "SELECT last_transaction FROM ticker_data WHERE ticker = %s ORDER BY date DESC"
 df = pd.read_sql(query, engine)
 
 # Assuming your dataframe `df` contains a column 'close' with stock closing prices

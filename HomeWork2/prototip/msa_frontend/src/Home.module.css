@@ -1,0 +1,15 @@
+.layout {
+
+    display: flex;
+    gap: 50px; /* Adds space between components */
+    align-items: flex-start; /* Aligns items at the top */
+    margin-top: 20px;
+}
+
+.layout > * {
+    flex: 1; /* Ensures equal width for children */
+}
+
+h1{
+    color: #5d5c5d;
+}

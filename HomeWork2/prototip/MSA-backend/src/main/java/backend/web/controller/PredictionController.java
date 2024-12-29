@@ -1,4 +1,4 @@
-package backend.msa.web.controller;
+package backend.web.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
