@@ -1,0 +1,87 @@
+.tableWrapper {
+    max-width: 1300px;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid rgba(213, 213, 213, 1);
+    border-radius: 10px;
+    background-color: rgba(252, 253, 253, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tableHeader {
+    display: flex;
+    flex-direction: column;
+    color: rgba(32, 34, 36, 1);
+    font: 800 14px Nunito Sans, -apple-system, Roboto, Helvetica, sans-serif;
+    padding-bottom: 10px;
+}
+
+.tableBody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.headerRow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: rgba(252, 253, 253, 1);
+    border-bottom: 1px solid rgba(213, 213, 213, 1);
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.headerCell {
+    flex-grow: 1;
+    text-align: center;
+    padding: 6px;
+    margin: 0 5px;
+}
+
+.lastPriceCell {
+    flex-grow: 2;
+    text-align: center; /* Align center */
+}
+
+.paginationControls {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.paginationControls button {
+    padding: 8px 16px;
+    background-color: #5ddc99;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.paginationControls button:disabled {
+    background-color: rgba(213, 213, 213, 1);
+    cursor: not-allowed;
+}
+
+.paginationControls button:hover:enabled {
+    background-color: #4cb87c;
+}
+
+.paginationControls span {
+    align-self: center;
+    font-size: 14px;
+}
+
+@media (max-width: 991px) {
+    .headerRow {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}

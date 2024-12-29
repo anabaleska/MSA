@@ -1,0 +1,64 @@
+.transactionRow {
+    display: flex;
+    flex-direction: column;
+    font-family: Nunito Sans, sans-serif;
+    width: 100%;
+}
+
+.transactionContent {
+    align-self: center;
+    display: flex;
+    width: 100%;
+    max-width: 1081px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.transactionDetails {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: rgba(32, 34, 36, 1);
+    font-weight: 600;
+    white-space: nowrap;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: auto 0;
+    justify-content: center;
+}
+
+.transactionCode,
+.transactionAmount,
+.transactionBalance,
+.transactionDate,
+.transactionTotal {
+    background-blend-mode: normal;
+    text-align: center; /* Center align text */
+    flex-grow: 1;
+    padding: 6px;
+}
+
+
+.divider {
+    aspect-ratio: 1000;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    background-blend-mode: normal;
+    margin-top: 24px;
+}
+
+@media (max-width: 991px) {
+    .transactionContent {
+        max-width: 100%;
+    }
+
+    .transactionDetails {
+        max-width: 100%;
+        white-space: initial;
+    }
+
+    .divider {
+        max-width: 100%;
+    }
+}
