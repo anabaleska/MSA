@@ -20,7 +20,7 @@ export const Header = () => {
     const location = useLocation();
     const navigationItems = [
         { label: 'Dashboard', path: '/', isActive: false },
-        { label: 'Stocks History', isActive: true },
+        { label: 'Stocks History', path: '/history', isActive: true },
         { label: 'Predictions', path:'/predictions', isActive: false },
         { label: 'Admin', path: '/admin', isActive: false, Admin: true },
         { label: 'UserProfile', path: '/profile', isActive: false }

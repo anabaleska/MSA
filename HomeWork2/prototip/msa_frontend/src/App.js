@@ -9,6 +9,7 @@ import {LoginPage} from "./LoginPage";
 import {SignUpPage} from "./SignUpPage";
 import PrivateRoute from "./PrivateRoute";
 import Predictions from "./Predictions";
+import History from "./History";
 
 const App = () => {
     return (
@@ -24,6 +25,12 @@ const App = () => {
                     <>
                         <Header />
                         <List />
+                    </>
+                } />
+                <Route path="/history" element={
+                    <>
+                        <Header />
+                        <History />
                     </>
                 } />
 

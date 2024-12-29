@@ -2,15 +2,22 @@ import * as React from "react";
 import styles from './TransactionItem.module.css';
 
 export default function TransactionItem({ transactionData, onDelete, onEdit }) {
+    function formatPrice(price) {
+        if (price == null) return "/";
+        return price.toLocaleString('de-DE', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        });
+    }
     return (
         <div className={styles.transactionRow}>
             <div className={styles.transactionContent}>
                 <div className={styles.transactionDetails}>
                     <div className={styles.transactionCode}>{transactionData.tickerName}</div>
-                    <div className={styles.transactionAmount}>{transactionData.maxPrice == null ? "/" : transactionData.maxPrice}</div>
-                    <div className={styles.transactionBalance}>{transactionData.minPrice == null ? "/" : transactionData.minPrice}</div>
+                    <div className={styles.transactionAmount}>{transactionData.maxPrice == null ? "/" : formatPrice(transactionData.maxPrice)}</div>
+                    <div className={styles.transactionBalance}>{transactionData.minPrice == null ? "/" : formatPrice(transactionData.minPrice)}</div>
                     <div className={styles.transactionDate}>{transactionData.date.split("T")[0]}</div>
-                    <div className={styles.transactionTotal}>{transactionData.lastTransactionPrice}</div>
+                    <div className={styles.transactionTotal}>{formatPrice(transactionData.lastTransactionPrice)}</div>
                 </div>
                 <div className={styles.actionButtons}>
                     <button
@@ -18,7 +25,7 @@ export default function TransactionItem({ transactionData, onDelete, onEdit }) {
                         tabIndex={0}
                         role="button"
                         aria-label="Delete transaction"
-                        onClick={() => onDelete(transactionData.code)} // Call onDelete handler
+                        onClick={() => onDelete(transactionData.code)}
                     >
                         Delete
                     </button>
@@ -27,7 +34,7 @@ export default function TransactionItem({ transactionData, onDelete, onEdit }) {
                         tabIndex={0}
                         role="button"
                         aria-label="Edit transaction"
-                        onClick={() => onEdit(transactionData.code)} // Call onEdit handler
+                        onClick={() => onEdit(transactionData.code)}
                     >
                         Edit
                     </button>

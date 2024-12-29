@@ -41,18 +41,21 @@
 }
 
 .deleteButton {
+    border-color: rgb(255, 128, 128);
     border-radius: 5px;
-    background-color: rgba(0, 182, 155, 1);
-    color: rgba(0, 182, 155, 1);
+    background-color: rgb(255, 128, 128);
+    color: var(--Color-White, #fff);
     padding: 6px 10px;
 }
 
 .editButton {
+    border-color:  #5ddc99;
     border-radius: 5px;
-    background-color: rgba(124, 68, 255, 1);
-    color: rgba(98, 38, 239, 1);
+    background-color: #5ddc99;
+    color: white;
     padding: 6px 10px;
 }
+
 
 .divider {
     aspect-ratio: 1000;

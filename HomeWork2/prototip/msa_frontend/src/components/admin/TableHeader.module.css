@@ -1,26 +1,44 @@
+.tableWrapper {
+    max-width: 1300px;
+    margin: 20px auto; /* Center table with margins */
+    padding: 20px; /* Add padding inside the wrapper */
+    border: 1px solid rgba(213, 213, 213, 1); /* Optional: Add a border */
+    border-radius: 10px; /* Rounded corners for the container */
+    background-color: rgba(252, 253, 253, 1); /* Light background for better contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
 .tableHeader {
-    border-radius: 0 0 0 0;
     display: flex;
     flex-direction: column;
     color: rgba(32, 34, 36, 1);
     font: 800 14px Nunito Sans, -apple-system, Roboto, Helvetica, sans-serif;
+    padding-bottom: 10px;
 }
 
-.headerRow {
-    border-radius: 14px 14px 0 0;
-    background-color: rgba(252, 253, 253, 1);
+.tableBody {
     display: flex;
-    width: 100%;
-    align-items: center;
+    flex-direction: column;
+    gap: 10px; /* Add spacing between rows */
+    padding: 10px 0;
+}
+
+
+
+.headerRow {
+    display: flex;
+    align-items: flex-end;
     gap: 40px 100px;
-    padding: 6px 31px;
-    border: 1px solid rgba(213, 213, 213, 1);
+    padding: 10px 20px;
+    background-color: rgba(252, 253, 253, 1);
+    border-bottom: 1px solid rgba(213, 213, 213, 1);
+    border-radius: 10px 10px 0 0;
 }
 
 .headerCell {
     background-blend-mode: normal;
     align-self: stretch;
-    margin: auto 0;
+    margin: 10px;
+
 }
 
 .lastPriceCell {
@@ -28,6 +46,39 @@
     align-self: stretch;
     flex-grow: 1;
     width: 291px;
+}
+
+
+.paginationControls {
+    display: flex;
+    justify-content: space-between; /* Align buttons and text */
+    padding: 10px 0;
+}
+
+.paginationControls button {
+    padding: 8px 16px;
+    background-color: #5ddc99;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.paginationControls button:disabled {
+    background-color: rgba(213, 213, 213, 1);
+    cursor: not-allowed;
+}
+
+.paginationControls button:hover:enabled {
+    background-color: #4cb87c;
+}
+
+.paginationControls span {
+    align-self: center;
+    font-size: 14px;
 }
 
 @media (max-width: 991px) {

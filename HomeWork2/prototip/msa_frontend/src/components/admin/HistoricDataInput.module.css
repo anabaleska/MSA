@@ -6,7 +6,8 @@
 }
 
 .title {
-    color: rgba(32, 34, 36, 1);
+    color: #5d5c5d;
+    margin-left: 90px;
     letter-spacing: -0.11px;
     align-self: start;
     font: 700 32px Nunito Sans, -apple-system, Roboto, Helvetica, sans-serif;
@@ -14,7 +15,7 @@
 
 .inputContainer {
     display: flex;
-    margin-top: 32px;
+    margin-left: 90px;
     width: 100%;
     gap: 20px;
     color: var(--Text-Gray2, #bebebe);
