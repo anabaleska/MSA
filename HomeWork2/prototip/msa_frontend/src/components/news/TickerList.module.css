@@ -3,22 +3,18 @@
     align-items: flex-end;
     font-family: Arial, sans-serif;
     padding: 20px;
-
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .tickerList {
-    background-color: #f7f7f8;
-    border: 1px solid #cacacb;
-    border-radius: 10px;
-
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    /*width: 50%;*/
     margin: 20px;
-    margin-right: 300px;
     padding: 20px;
-    width: 100px; /* Set the width of the ticker list container */
-     /* Optional: Centers the ticker list */
+    width: 100px;
 }
 
 /* Header Styles */
@@ -71,7 +67,7 @@ tr{
 
 .pagination button {
     padding: 10px 15px;
-    background-color: #007BFF;
+    background-color: #5ddc99;
     color: white;
     border: none;
     border-radius: 4px;
@@ -84,7 +80,7 @@ tr{
 }
 
 .pagination button:hover:not(:disabled) {
-    background-color: #0056b3;
+    background-color: #5ddc99;
 }
 
 /* Items Per Page Dropdown Styles */
@@ -123,7 +119,7 @@ tr{
 /*    padding: 4px;*/
 /*}*/
 .sentiment{
-    background-color: rgba(185, 6, 6, 0.8);
+    background-color: rgb(255, 128, 128);
     color: var(--Color-White, #fff);
     border-radius: 8px;
 }
@@ -137,4 +133,7 @@ tr{
      width: 170px;
      margin-left: 20px;
      /*align-items:stretch;*/
+ }
+ h2{
+     color: #5d5c5d;
  }

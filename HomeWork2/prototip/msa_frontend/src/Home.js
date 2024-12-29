@@ -37,7 +37,6 @@ const Home = () => {
             <div className={styles.layout}>
             <GraphComponent tickerId={selectedTicker} />
                 <TickerList /> </div>
-            <h2>End</h2>
         </div>
 
     );

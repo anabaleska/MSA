@@ -20,6 +20,29 @@ const TickerList = () => {
             .catch(error => console.error("Error fetching tickers:", error));
     }, []);
 
+    const tickerNameMap = {
+        "5847": "ALK",
+        "5881": "GECK",
+        "5885": "GRNT",
+        "5905": "KMB",
+        "5907": "KOMU",
+        "5917": "LOZP",
+        "5921": "MB",
+        "5927": "MPT",
+        "5952": "REPL",
+        "5956" : "RZIT",
+        "5959" : "RZLV",
+        "5961" : "RZUG",
+        "5962" : "RZUS",
+        "6001" : "VITA",
+        "5882" : "GECT",
+        "5893" : "INOV",
+        "5929" : "MTUR",
+        "5955" : "RZEK",
+        "5963" : "SBT",
+        "5966" : "SKON",
+    };
+
     const displayedTickers = tickers.slice(
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
@@ -30,7 +53,7 @@ const TickerList = () => {
 
     return (
         <div id={"news"} className={styles.tickerList}>
-            <h2>Ticker Predictions</h2>
+            <h2>Ticker Predictions from Fundamental Analysis</h2>
             <table>
                 <thead>
                 <tr>
@@ -42,7 +65,7 @@ const TickerList = () => {
                 <tbody>
                 {displayedTickers.map((ticker, index) => (
                     <tr key={index}>
-                        <td>{ticker.tickerId}</td>
+                        <td>{tickerNameMap[ticker.tickerId]}</td>
                         <td>{ticker.date.split("T")[0]}</td>
                         <td className={styles.sentiment}>{ticker.sentiment}</td>
                     </tr>
