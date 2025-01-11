@@ -1,10 +1,9 @@
 from datetime import datetime, timedelta
 from sqlalchemy import Table, MetaData
-from HomeWork1.db_config import get_database_connection
+from db_config import get_database_connection
 from sqlalchemy.dialects.postgresql import insert
 from functools import partial
 from sqlalchemy import text
-
 from dateutil.relativedelta import relativedelta
 from filter_two import check_last_available_date
 from concurrent.futures import ThreadPoolExecutor
@@ -107,11 +106,8 @@ def update_data(ticker, dictionary):
 
 def process_single_ticker(ticker,last_date):
     print(f"Processing ticker: {ticker}")
-
-
     new_data = fetch_data_for_ticker(ticker, last_date)
     update_data(ticker, new_data)
-    # df_existing.to_csv(f'DataFrames/{ticker}.csv', index=False)
     print(f"Done for ticker {ticker}")
 
 def process_tickers(tickers):

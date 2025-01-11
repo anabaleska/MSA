@@ -1,5 +1,5 @@
 from sqlalchemy import Table, MetaData
-from HomeWork1.db_config import get_database_connection
+from db_config import get_database_connection
 from datetime import datetime
 
 def check_last_available_date():
