@@ -1,7 +1,7 @@
-package backend.msa.services.converter.impl;
-import backend.msa.model.Indicators;
-import backend.msa.model.dto.IndicatorsDTO;
-import backend.msa.services.converter.IndicatorsConverterService;
+package backend.services.converter.impl;
+import backend.model.Indicators;
+import backend.model.dto.IndicatorsDTO;
+import backend.services.converter.IndicatorsConverterService;
 import org.springframework.stereotype.Service;
 
 @Service("indicatorsConverterServiceImpl")
