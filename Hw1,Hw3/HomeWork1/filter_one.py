@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from sqlalchemy import Table, Column, String, Date, Float, MetaData, Integer, Sequence, ForeignKey,PrimaryKeyConstraint
-from HomeWork1.db_config import get_database_connection
+from db_config import get_database_connection
 from sqlalchemy.dialects.postgresql import insert
 
 ticker_dates={}
@@ -22,7 +22,6 @@ def save_tickers_to_db(tickers):
     engine = get_database_connection()
     metadata = MetaData()
     print("Database connected!")
-    # Define the table
     tickers_table = Table(
         'tickers', metadata,
         Column('id', Integer, Sequence('tickers_id_seq'), primary_key=True),
@@ -33,7 +32,6 @@ def save_tickers_to_db(tickers):
     with engine.connect() as conn:
         with conn.begin():
          for ticker in tickers:
-             # ticker_dates[ticker]=None
              stmt = insert(tickers_table).values(ticker=ticker)
              stmt = stmt.on_conflict_do_nothing(index_elements=['ticker'])
              try:
@@ -48,7 +46,6 @@ def create_ticker_table():
     metadata = MetaData()
     tickers_table = Table('tickers', metadata, schema='public', autoload_with=engine)
     f=tickers_table.c.id
-    # Define the table schema for each ticker
     ticker_table = Table(
         'ticker_data', metadata,
         Column('id', Integer, ForeignKey(f), nullable=False),
@@ -66,17 +63,3 @@ def create_ticker_table():
 
     metadata.create_all(engine)
     print(f"Created table for ticker_details")
-
-
-# def create_tables_for_all_tickers():
-#     # Fetch tickers from the 'tickers' table
-#     engine = get_database_connection()
-#     tickers_table = Table('tickers', MetaData(), autoload_with=engine)
-#
-#     with engine.connect() as conn:
-#         result = conn.execute(tickers_table.select())
-#         tickers = [row[1] for row in result]
-#
-#     # Create a table for each ticker
-#     for ticker in tickers:
-#         create_ticker_table()
