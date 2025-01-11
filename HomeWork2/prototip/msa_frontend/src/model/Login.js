@@ -1,4 +1,4 @@
-// UserLoginDTO.js
+
 
 export class UserLoginDTO {
     constructor(email, password) {

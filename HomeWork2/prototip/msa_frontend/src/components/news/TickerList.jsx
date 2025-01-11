@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import styles from './TickerList.module.css'; // Import CSS module
+import styles from './TickerList.module.css';
 
 const TickerList = () => {
     const [tickers, setTickers] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 5; // Number of tickers to show per page
+    const itemsPerPage = 5;
 
     useEffect(() => {
-        // Fetch ticker data from the backend
+
         axios.get("http://localhost:8081/api/ticker-news")
             .then(response =>
             {
-                // Assuming the response contains an object with a "content" field that is an array
-                const data = response.data.content || []; // If no content, fallback to an empty array
-                console.log("Tickers fetched:", data); // Log the data to check the structure
+
+                const data = response.data.content || [];
+                console.log("Tickers fetched:", data);
                 setTickers(data);
             })
             .catch(error => console.error("Error fetching tickers:", error));

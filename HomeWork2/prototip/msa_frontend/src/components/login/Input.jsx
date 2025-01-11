@@ -13,7 +13,7 @@ export const Input = ({ label, type = "text", placeholder, value, onChange }) =>
                 className={styles.inputField}
                 placeholder={placeholder}
                 value={value}
-                onChange={(e) => onChange(e.target.value)}  // Handling the input change
+                onChange={(e) => onChange(e.target.value)}
                 aria-label={label}
             />
         </div>

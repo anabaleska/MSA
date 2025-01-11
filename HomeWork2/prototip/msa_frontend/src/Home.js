@@ -10,13 +10,13 @@ const Home = () => {
     const [selectedTicker, setSelectedTicker] = useState("");
     console.log(styles)
 
-    // Fetch tickers from the backend API
+
     useEffect(() => {
         fetch('http://localhost:8081/api/tickers')
             .then(response => response.json())
             .then(data => {
                 console.log("Tickers fetched:", data);
-                setTickers(data.content || []); // Extract content property
+                setTickers(data.content || []);
             })
             .catch(error => console.error("Error fetching tickers:", error));
 

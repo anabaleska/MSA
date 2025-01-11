@@ -18,7 +18,7 @@ const PrivateRoute = ({ children }) => {
         return <Navigate to="/login" />;
     }
 
-    // If the user is authenticated and authorized, render the children
+
     return children;
 };
 

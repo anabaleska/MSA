@@ -1,26 +1,26 @@
 import React, {useEffect, useState} from 'react';
 
 const List = () => {
-    // Use your fetching logic and state management here
-    const [tickers, setTickers] = useState([]); // State for tickers
-    const [details, setDetails] = useState([]); // State for details
+
+    const [tickers, setTickers] = useState([]);
+    const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        // Fetch tickers
+
         fetch('http://localhost:8081/api/tickers')
             .then(response => response.json())
             .then(data => {
                 console.log("Tickers fetched:", data);
-                setTickers(data.content || []); // Extract content property
+                setTickers(data.content || []);
             })
             .catch(error => console.error("Error fetching tickers:", error));
 
-        // Fetch details
+
         fetch('http://localhost:8081/api/ticker-values')
             .then(response => response.json())
             .then(data => {
                 console.log("Details fetched:", data);
-                setDetails(data.content || []); // Extract content property
+                setDetails(data.content || []);
             })
             .catch(error => console.error("Error fetching details:", error));
     }, []);

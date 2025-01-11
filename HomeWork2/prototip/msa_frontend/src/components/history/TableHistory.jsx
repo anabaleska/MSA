@@ -5,7 +5,7 @@ import Transaction from "./Transaction";
 const TableHistory = () => {
 
     const [details, setDetails] = useState([]);
-    const [currentPage, setCurrentPage] = useState(0); // State for current page
+    const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
 
     const fetchPage = (currentPage) => {
@@ -13,8 +13,8 @@ const TableHistory = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log("Details fetched:", data);
-                setDetails(data.content || []); // Extract content property
-                setTotalPages(data.totalPages || 0); // Set total pages from API
+                setDetails(data.content || []);
+                setTotalPages(data.totalPages || 0);
             })
             .catch((error) => console.error("Error fetching details:", error));
     };
@@ -46,12 +46,12 @@ const TableHistory = () => {
 
     const handleDelete = (code) => {
         console.log("Delete transaction with code:", code);
-        // Handle delete logic here (e.g., API call to delete, and update state)
+
     };
 
     const handleEdit = (code) => {
         console.log("Edit transaction with code:", code);
-        // Handle edit logic here
+
     };
 
     return (

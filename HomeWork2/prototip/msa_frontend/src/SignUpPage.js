@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Input } from './components/login/Input';
 import styles from './LoginPage.module.css';
 import { useNavigate } from 'react-router-dom';
-import { register } from './service/UserService'; // Import the register function
+import { register } from './service/UserService';
 
 export const SignUpPage = () => {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [repeatedPassword, setRepeatedPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');  // For error messages
+    const [errorMessage, setErrorMessage] = useState('');
 
     const navigate = useNavigate();
 
@@ -20,7 +20,6 @@ export const SignUpPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Validate passwords match
         if (password !== repeatedPassword) {
             setErrorMessage("Passwords do not match.");
             return;
@@ -34,10 +33,10 @@ export const SignUpPage = () => {
         };
 
         try {
-            // Call the register function from your service
+
             await register(userDTO);
 
-            // Redirect to the login page after successful registration
+
             navigate('/login');
         } catch (error) {
             setErrorMessage('Sign up failed. Please try again later.');

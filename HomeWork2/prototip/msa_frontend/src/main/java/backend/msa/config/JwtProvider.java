@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Component
 public class JwtProvider {
-    @Value("${jwt.secret}")  // Inject jwtSecret value from application.properties
+    @Value("${jwt.secret}")
     private String jwtSecret;
 
     public String createToken(String email, String role) {

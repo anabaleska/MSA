@@ -12,7 +12,7 @@ export const Header = () => {
     if (token) {
         try {
             const decodedToken = jwtDecode(token);
-            isAdmin = decodedToken.role === 'ADMIN'; // Check if the user has the admin role
+            isAdmin = decodedToken.role === 'ADMIN';
         } catch (error) {
             console.error('Invalid token:', error);
         }

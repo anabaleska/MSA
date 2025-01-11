@@ -28,7 +28,7 @@ const GraphComponent = ({tickerId}) => {
     }, [tickerId]);
 
     const chartData = {
-        labels: indicators.map((item) => (item.date.split("T")[0])), // Assuming date is in a usable format
+        labels: indicators.map((item) => (item.date.split("T")[0])),
         datasets: [
             {
                 label: "SMA 50",

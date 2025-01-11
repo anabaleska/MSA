@@ -29,7 +29,7 @@ public class AuthServiceImpl implements AuthService {
             throw new RuntimeException("Invalid user credentials");
         }
         String role= user.getUsername().equals("admin") ? "ADMIN" :"USER";
-        String token = jwtProvider.createToken(email,role);  // Assuming jwtProvider is responsible for generating JWT
+        String token = jwtProvider.createToken(email,role);
         return token;
     }
 }

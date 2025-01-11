@@ -1,4 +1,4 @@
-// UserDTO.js
+
 
 export class UserDTO {
     constructor(username, password, repeatedPassword, email) {
