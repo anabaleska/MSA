@@ -1,6 +1,6 @@
-package backend.msa.services.converter;
-import backend.msa.model.TickersNews;
-import backend.msa.model.dto.TickersNewsDTO;
+package backend.services.converter;
+import backend.model.TickersNews;
+import backend.model.dto.TickersNewsDTO;
 
 public interface TickersNewsConverterService {
     TickersNewsDTO convertToTickersNewsDTO(TickersNews tickersNews);

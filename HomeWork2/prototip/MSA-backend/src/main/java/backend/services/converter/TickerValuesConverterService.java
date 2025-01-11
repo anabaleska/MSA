@@ -1,7 +1,7 @@
-package backend.msa.services.converter;
+package backend.services.converter;
 
-import backend.msa.model.TickerValues;
-import backend.msa.model.dto.TickerValuesDTO;
+import backend.model.TickerValues;
+import backend.model.dto.TickerValuesDTO;
 
 public interface TickerValuesConverterService {
     TickerValuesDTO convertToTickerValuesDTO(TickerValues tickerValues);

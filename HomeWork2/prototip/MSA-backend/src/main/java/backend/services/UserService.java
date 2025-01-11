@@ -1,7 +1,7 @@
-package backend.msa.services;
+package backend.services;
 
 
-import backend.msa.model.enumerations.Role;
+import backend.model.enumerations.Role;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface UserService extends UserDetailsService {

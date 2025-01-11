@@ -1,6 +1,6 @@
-package backend.msa.services;
+package backend.services;
 
-import backend.msa.model.Ticker;
+import backend.model.Ticker;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

@@ -1,8 +1,8 @@
-package backend.msa.web.controller;
+package backend.web.controller;
 
-import backend.msa.model.dto.UserDTO;
-import backend.msa.model.enumerations.Role;
-import backend.msa.services.UserService;
+import backend.model.dto.UserDTO;
+import backend.model.enumerations.Role;
+import backend.services.UserService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

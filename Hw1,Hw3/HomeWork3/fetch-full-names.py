@@ -1,20 +1,7 @@
 import requests
-import os
 import psycopg2
-from dotenv import load_dotenv
 from bs4 import BeautifulSoup
-
-# Load environment variables
-load_dotenv()
-
-# Database connection details
-DB_CONFIG = {
-    'dbname': "msa_data",
-    'user': "postgres",
-    'password': "anaiman",
-    'host': "localhost",
-    'port': 5432
-}
+from config import DB_CONFIG
 
 def add_column_if_not_exists():
     """Add a column 'full_name' to the stocks table if it doesn't exist."""

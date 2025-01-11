@@ -1,4 +1,4 @@
-package backend.msa.model.exceptions;
+package backend.model.exceptions;
 
 public class InvalidUserCredentialException extends RuntimeException {
     public InvalidUserCredentialException() {

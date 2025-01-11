@@ -1,4 +1,4 @@
-package backend.msa.model.enumerations;
+package backend.model.enumerations;
 
 import org.springframework.security.core.GrantedAuthority;
 

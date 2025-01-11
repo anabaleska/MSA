@@ -1,6 +1,6 @@
-package backend.msa.repository;
+package backend.repository;
 
-import backend.msa.model.Ticker;
+import backend.model.Ticker;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

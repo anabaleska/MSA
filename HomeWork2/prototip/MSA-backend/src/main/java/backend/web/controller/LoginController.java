@@ -1,9 +1,9 @@
-package backend.msa.web.controller;
+package backend.web.controller;
 
-import backend.msa.model.dto.LoginDTO;
+import backend.model.dto.LoginDTO;
 
-import backend.msa.model.dto.LoginResponse;
-import backend.msa.services.AuthService;
+import backend.model.dto.LoginResponse;
+import backend.services.AuthService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;

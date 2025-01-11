@@ -1,4 +1,4 @@
-package backend.msa.model.dto;
+package backend.model.dto;
 import lombok.NonNull;
 
 public record LoginDTO(@NonNull String email,

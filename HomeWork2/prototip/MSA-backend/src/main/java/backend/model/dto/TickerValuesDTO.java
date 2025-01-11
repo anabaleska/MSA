@@ -1,4 +1,4 @@
-package backend.msa.model.dto;
+package backend.model.dto;
 import java.util.Date;
 
 public record TickerValuesDTO(

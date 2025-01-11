@@ -1,4 +1,4 @@
-package backend.msa.model.dto;
+package backend.model.dto;
 
 public class LoginResponse {
     private String token;

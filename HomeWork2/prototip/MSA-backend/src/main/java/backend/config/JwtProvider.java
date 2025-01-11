@@ -1,4 +1,4 @@
-package backend.msa.config;
+package backend.config;
 
 import backend.msa.model.enumerations.Role;
 import io.jsonwebtoken.Jwts;

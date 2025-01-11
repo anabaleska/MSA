@@ -1,5 +1,5 @@
-package backend.msa.services;
-import backend.msa.model.Indicators;
+package backend.services;
+import backend.model.Indicators;
 
 import java.util.List;
 

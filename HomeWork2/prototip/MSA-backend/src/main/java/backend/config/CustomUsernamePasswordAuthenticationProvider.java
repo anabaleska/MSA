@@ -1,7 +1,7 @@
-package backend.msa.config;
+package backend.config;
 
 
-import backend.msa.services.UserService;
+import backend.services.UserService;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

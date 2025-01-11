@@ -1,4 +1,4 @@
-package backend.msa.services;
+package backend.services;
 
 public interface AuthService {
 

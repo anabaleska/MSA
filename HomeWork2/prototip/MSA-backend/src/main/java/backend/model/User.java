@@ -1,5 +1,5 @@
-package backend.msa.model;
-import backend.msa.model.enumerations.Role;
+package backend.model;
+import backend.model.enumerations.Role;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +12,6 @@ import java.util.Collections;
 
 @Data
 @Entity
-@NoArgsConstructor
 @Table(name = "msa_users")
 
 public class User implements UserDetails, Serializable {

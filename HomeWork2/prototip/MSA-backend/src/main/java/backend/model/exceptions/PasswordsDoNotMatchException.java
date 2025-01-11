@@ -1,4 +1,4 @@
-package backend.msa.model.exceptions;
+package backend.model.exceptions;
 public class PasswordsDoNotMatchException extends RuntimeException {
     public PasswordsDoNotMatchException() {
         super("Passwords do not match");

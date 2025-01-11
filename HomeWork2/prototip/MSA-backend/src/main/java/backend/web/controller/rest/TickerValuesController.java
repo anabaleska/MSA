@@ -1,8 +1,8 @@
-package backend.msa.web.controller.rest;
+package backend.web.controller.rest;
 
-import backend.msa.model.dto.TickerValuesDTO;
-import backend.msa.services.TickerValuesService;
-import backend.msa.services.converter.TickerValuesConverterService;
+import backend.model.dto.TickerValuesDTO;
+import backend.services.TickerValuesService;
+import backend.services.converter.TickerValuesConverterService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

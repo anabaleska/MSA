@@ -1,7 +1,7 @@
-package backend.msa.services.converter;
+package backend.services.converter;
 
-import backend.msa.model.Ticker;
-import backend.msa.model.dto.TickerDTO;
+import backend.model.Ticker;
+import backend.model.dto.TickerDTO;
 
 public interface TickerConverterService {
     TickerDTO convertToTickerDTO(Ticker ticker);

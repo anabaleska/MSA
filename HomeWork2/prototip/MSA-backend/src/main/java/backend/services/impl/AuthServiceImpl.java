@@ -1,10 +1,10 @@
-package backend.msa.services.impl;
+package backend.services.impl;
 
 
 import backend.msa.config.JwtProvider;
 import backend.msa.model.User;
 import backend.msa.repository.UserRepository;
-import backend.msa.services.AuthService;
+import backend.services.AuthService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package backend.msa.web.controller.rest;
-import backend.msa.model.dto.IndicatorsDTO;
-import backend.msa.services.IndicatorsService;
-import backend.msa.services.converter.IndicatorsConverterService;
+package backend.web.controller.rest;
+import backend.model.dto.IndicatorsDTO;
+import backend.services.IndicatorsService;
+import backend.services.converter.IndicatorsConverterService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

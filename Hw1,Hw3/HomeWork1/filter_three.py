@@ -9,7 +9,6 @@ from filter_two import check_last_available_date
 from concurrent.futures import ThreadPoolExecutor
 import requests
 from bs4 import BeautifulSoup
-from transformers import pipeline
 
 def format_number(value):
     if value is None or value == "":
@@ -20,13 +19,6 @@ def format_number(value):
         if len(parts) > 2:
             value = value.replace('.', '', value.count('.') - 1)
     return value
-
-def analyze_sentiment(text):
-    sentiment_result = sentiment_analyzer(text)
-    sentiment = sentiment_result[0]['label']
-    return sentiment.lower()
-
-
 
 def fetch_data_for_ticker(ticker, start_date):
     print(f"Fetching data for {ticker} starting from {start_date}")
@@ -95,7 +87,7 @@ def update_data(ticker, dictionary):
                         best = float(row['BEST']) if row['BEST'] else None,
                         total = float(row['Total']) if row['Total'] else None
                         )
-                        #insert_stmt = insert_stmt.on_conflict_do_nothing(index_elements=['Date','id'])
+
                         try:
 
                             conn.execute(insert_stmt)

@@ -1,6 +1,6 @@
-package backend.msa.services;
+package backend.services;
 
-import backend.msa.model.TickerValues;
+import backend.model.TickerValues;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 public interface TickerValuesService {

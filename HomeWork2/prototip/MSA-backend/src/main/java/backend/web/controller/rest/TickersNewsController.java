@@ -1,8 +1,8 @@
-package backend.msa.web.controller.rest;
+package backend.web.controller.rest;
 
-import backend.msa.model.dto.TickersNewsDTO;
-import backend.msa.services.TickersNewsService;
-import backend.msa.services.converter.TickersNewsConverterService;
+import backend.model.dto.TickersNewsDTO;
+import backend.services.TickersNewsService;
+import backend.services.converter.TickersNewsConverterService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,17 +1,10 @@
-import os
 import pandas as pd
 import psycopg2
 from psycopg2.extras import RealDictCursor
-from dotenv import load_dotenv
 import ta
 import logging
 
-# Load environment variables and set up logging
-# load_dotenv()
-# logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-
-# Database connection
 def get_database_connection():
     return psycopg2.connect(
         dbname="msa_data",
@@ -21,8 +14,6 @@ def get_database_connection():
         port=5432
     )
 
-
-# Get all stock tickers
 def get_all_tickers():
     query = "SELECT id FROM tickers"
     try:
@@ -35,7 +26,7 @@ def get_all_tickers():
         return []
 
 
-# Fetch stock data for a given ticker
+
 def get_ticker_data(stock_id):
     query = """
     SELECT date, last_transaction, max, min, 
@@ -55,27 +46,27 @@ def get_ticker_data(stock_id):
         return pd.DataFrame()
 
 
-# Calculate technical indicators
+
 def calculate_indicators(df):
     if df.empty:
         logging.warning("No data to calculate indicators.")
         return pd.DataFrame()
 
-    # Fill missing values
+
     df.fillna(0, inplace=True)
 
-    # 5 Moving Averages
+
     df['SMA_50'] = df['last_transaction'].rolling(window=50).mean()
     df['SMA_200'] = df['last_transaction'].rolling(window=200).mean()
     df['EMA_50'] = df['last_transaction'].ewm(span=50, adjust=False).mean()
     df['EMA_200'] = df['last_transaction'].ewm(span=200, adjust=False).mean()
 
-    # Bollinger Bands
+
     bb = ta.volatility.BollingerBands(df['last_transaction'])
     df['BollingerHigh'] = bb.bollinger_hband()
     df['BollingerLow'] = bb.bollinger_lband()
 
-    # 5 Oscillators
+
     df['RSI'] = ta.momentum.RSIIndicator(df['last_transaction'], window=14).rsi()
     df['MACD'] = ta.trend.MACD(df['last_transaction']).macd()
     df['Stochastic'] = ta.momentum.StochasticOscillator(
@@ -89,7 +80,7 @@ def calculate_indicators(df):
     return df
 
 
-# Generate buy/sell/hold signals
+
 def generate_signals(df):
     if df.empty:
         logging.warning("No data available to generate signals.")
@@ -97,22 +88,19 @@ def generate_signals(df):
 
     df['signal'] = 'Hold'
 
-    # RSI-based signals
+
     df.loc[df['RSI'] < 30, 'signal'] = 'Buy'
     df.loc[df['RSI'] > 70, 'signal'] = 'Sell'
 
-    # MACD-based signals
     df.loc[df['MACD'] > 0, 'signal'] = 'Buy'
     df.loc[df['MACD'] < 0, 'signal'] = 'Sell'
 
-    # CCI-based signals
     df.loc[df['CCI'] < -100, 'signal'] = 'Buy'
     df.loc[df['CCI'] > 100, 'signal'] = 'Sell'
 
     return df
 
 
-# Store processed data back into the database
 def store_predictions_to_db(df, stock_id, timeframe):
     if df.empty:
         logging.warning("No data to store.")
@@ -156,7 +144,6 @@ def store_predictions_to_db(df, stock_id, timeframe):
         logging.error(f"Error storing predictions: {e}")
 
 
-# Main function to process data for all tickers and timeframes
 def process_all_tickers():
     ticker_ids = get_all_tickers()
     timeframes = ['D', 'W', 'M']

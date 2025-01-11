@@ -1,31 +1,8 @@
-import os
 import psycopg2
 import requests
 from bs4 import BeautifulSoup
-from dotenv import load_dotenv
-from datetime import datetime
 from transformers import pipeline
-import torch
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
-from torch.nn.functional import softmax
-
-# Database connection configuration
-DB_CONFIG = {
-    'dbname': "msa_data",
-    'user': "postgres",
-    'password': "anaiman",
-    'host': "localhost",
-    'port': 5432
-}
-
-# model_name = "nlptown/bert-base-multilingual-uncased-sentiment"
-# tokenizer = AutoTokenizer.from_pretrained(model_name)
-# model = AutoModelForSequenceClassification.from_pretrained(model_name)
-#
-# # If using GPU, move model to device
-# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-# model.to(device)
-
+from config import DB_CONFIG
 
 def get_news_pages():
     for page_num in range(1, 6):
@@ -48,16 +25,6 @@ def get_news_pages():
             print("No news links found.")
             return None
         return news_links
-
-
-
-# def predict_sentiment(text):
-#     inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True).to(device)
-#     with torch.no_grad():
-#         logits = model(**inputs).logits.squeeze().cpu()
-#     probabilities = torch.nn.functional.softmax(logits, dim=-1)
-#     sentiment = torch.argmax(probabilities).item()  # This gives the sentiment label (0 = negative, 1 = neutral, 2 = positive)
-#     return sentiment, probabilities[sentiment].item()  # Return the sentiment and its confidence score
 
 def fetch_news(news_links, ticker, ticker_id, full_name):
 
@@ -95,25 +62,12 @@ def fetch_news(news_links, ticker, ticker_id, full_name):
                     print(f"Sentiment result for link {link}: {sentiment_result}")
 
                     sentiment_label = sentiment_result["label"]
-                    # sentiment, score = predict_sentiment(news_text[:512])
-                    # print(f"Sentiment result for link {link}: {sentiment}, Score: {score}")
-
-                    # # Map the sentiment number to string
-                    # if sentiment == 0:  # Negative
-                    #     sentiment_label = "Negative"
-                    # elif sentiment == 1:  # Neutral
-                    #     sentiment_label = "Neutral"
-                    # else:  # Positive
-                    #     sentiment_label = "Positive"
 
                     if sentiment_label=='LABEL_0':
-                            sentiment = "Negative"
                             neg+=1
                     elif sentiment_label=='LABEL_1':
-                            sentiment = "Neutral"
                             neutral+=1
                     else:
-                            sentiment = "Positive"
                             pos+=1
 
             if not company_news_found:
@@ -127,29 +81,12 @@ def fetch_news(news_links, ticker, ticker_id, full_name):
                 else :
                         prediction="Hold"
 
-
-
-
-
-                    # cursor.execute("""
-                    #                         INSERT INTO latest_news (date, text, sentiment)
-                    #                         VALUES (CURRENT_DATE, %s, %s)
-                    #                         RETURNING id;
-                    #                     """, (news_text, sentiment))
-
-
                 cursor.execute("""
                                                INSERT INTO tickers_news (ticker_id, news_id,date,prediction)
                                                VALUES (%s, %s, CURRENT_DATE, %s);
                                            """, (ticker_id, index+100,prediction))
 
                 conn.commit()
-
-
-
-
-
-
 
 
 
@@ -165,9 +102,6 @@ def get_latest_news_date(conn):
         cursor.execute("SELECT MAX(date) FROM latest_news;")
         return cursor.fetchone()[0]
 
-
-
-
 def fetch_and_process_news(conn):
     """Fetch and process the latest news articles."""
     tickers = fetch_tickers(conn)
@@ -177,19 +111,10 @@ def fetch_and_process_news(conn):
         fetch_news(news_links,  ticker_name, ticker_id, full_name)
         print(f"done for ticker {ticker_name}")
 
-
 def init_db():
     """Initialize the database and create necessary tables."""
     with psycopg2.connect(**DB_CONFIG) as conn:
         with conn.cursor() as cursor:
-            # cursor.execute("""
-            #     CREATE TABLE IF NOT EXISTS latest_news (
-            #         id SERIAL PRIMARY KEY,
-            #         date DATE,
-            #         text TEXT,
-            #         sentiment VARCHAR(255)
-            #     );
-            # """)
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS tickers_news (
                     id SERIAL PRIMARY KEY,
@@ -198,7 +123,6 @@ def init_db():
                     date DATE,
                     prediction VARCHAR(255),
                     FOREIGN KEY (ticker_id) REFERENCES tickers(id)
-                    --FOREIGN KEY (news_id) REFERENCES latest_news(id)
                 );
             """)
             conn.commit()

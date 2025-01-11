@@ -1,8 +1,8 @@
-package backend.msa.web.controller.rest;
+package backend.web.controller.rest;
 
-import backend.msa.model.dto.TickerDTO;
-import backend.msa.services.TickerService;
-import backend.msa.services.converter.TickerConverterService;
+import backend.model.dto.TickerDTO;
+import backend.services.TickerService;
+import backend.services.converter.TickerConverterService;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Page;

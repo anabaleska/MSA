@@ -1,4 +1,4 @@
-package backend.msa.model.exceptions;
+package backend.model.exceptions;
 
 public class UsernameExistsException extends RuntimeException {
     public UsernameExistsException(String username) {

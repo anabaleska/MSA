@@ -1,5 +1,5 @@
-package backend.msa.repository;
-import backend.msa.model.Indicators;
+package backend.repository;
+import backend.model.Indicators;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

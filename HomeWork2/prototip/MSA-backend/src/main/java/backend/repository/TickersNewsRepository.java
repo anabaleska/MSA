@@ -1,5 +1,5 @@
-package backend.msa.repository;
-import backend.msa.model.TickersNews;
+package backend.repository;
+import backend.model.TickersNews;
 import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
