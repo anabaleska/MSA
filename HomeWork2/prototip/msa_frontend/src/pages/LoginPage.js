@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Input } from './components/login/Input';
-import styles from './LoginPage.module.css';
+import { Input } from '../components/login/Input';
+import styles from './styles/LoginPage.module.css';
 import { useNavigate } from 'react-router-dom';
-import { login } from './service/UserService';
+import { login } from '../service/UserService';
 import { jwtDecode } from 'jwt-decode';
 
 

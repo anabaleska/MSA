@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Input } from './components/login/Input';
-import styles from './LoginPage.module.css';
+import { Input } from '../components/login/Input';
+import styles from './styles/LoginPage.module.css';
 import { useNavigate } from 'react-router-dom';
-import { register } from './service/UserService';
+import { register } from '../service/UserService';
 
 export const SignUpPage = () => {
     const [email, setEmail] = useState('');

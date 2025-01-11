@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import List from './List';
-import './index.css'
-import {Header} from "./components/navigation/Header";
+import './styles/index.css'
+import {Header} from "../components/navigation/Header";
 import Admin from "./Admin";
 import {LoginPage} from "./LoginPage";
 import {SignUpPage} from "./SignUpPage";

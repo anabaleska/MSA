@@ -1,6 +1,6 @@
 import React from 'react';
-import HistoricDataInput from "./components/admin/HistoricDataInput";
-import TableHeader from "./components/admin/TableHeader";
+import HistoricDataInput from "../components/admin/HistoricDataInput";
+import TableHeader from "../components/admin/TableHeader";
 
 
 const Admin = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import TableHistory from "./components/history/TableHistory";
+import TableHistory from "../components/history/TableHistory";
 
 
 const History = () => {

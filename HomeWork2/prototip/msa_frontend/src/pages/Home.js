@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import { useState } from "react";
-import GraphComponent from "./components/indicators/GraphComponet";
-import Dropdown from "./components/indicators/Dropdown";
-import styles from "./Home.module.css";
-import TickerList from "./components/news/TickerList";
+import GraphComponent from "../components/indicators/GraphComponet";
+import Dropdown from "../components/indicators/Dropdown";
+import styles from "./styles/Home.module.css";
+import TickerList from "../components/news/TickerList";
 
 const Home = () => {
     const [tickers, setTickers] = useState([]);

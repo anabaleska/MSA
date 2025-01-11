@@ -1,0 +1,16 @@
+.layout {
+
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.layout > * {
+    flex: 1; 
+}
+
+h1{
+    color: #5d5c5d;
+    margin: 20px;
+}
