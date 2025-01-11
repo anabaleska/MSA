@@ -27,25 +27,25 @@ package backend.web.controller.rest;
 //    }
 //
 //}
+
 import backend.model.dto.TickerDTO;
+import backend.model.dto.TickerPageDTO;
 import backend.services.microservice.TickerServiceClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/main-ticker")
+@RequestMapping("/api/tickers")
+@CrossOrigin(origins = "http://localhost:3000")
 public class TickerController {
 
-    private final TickerServiceClient tickerServiceClient;
+    @Autowired
+    private TickerServiceClient tickerServiceClient;
 
-    public TickerController(TickerServiceClient tickerServiceClient) {
-        this.tickerServiceClient = tickerServiceClient;
-    }
-
-    @GetMapping()
-    public TickerDTO getTickers() {
-        return tickerServiceClient.getTickerInfo();
+    @GetMapping
+    public TickerPageDTO getPaginatedTickers(Pageable pageable) {
+        return tickerServiceClient.getPaginatedTickers(pageable);
     }
 }
