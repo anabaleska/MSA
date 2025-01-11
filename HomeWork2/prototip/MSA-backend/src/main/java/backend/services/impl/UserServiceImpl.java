@@ -1,13 +1,13 @@
-package backend.msa.services.impl;
+package backend.services.impl;
 
 
-import backend.msa.model.User;
-import backend.msa.model.enumerations.Role;
-import backend.msa.model.exceptions.InvalidUserCredentialException;
-import backend.msa.model.exceptions.PasswordsDoNotMatchException;
-import backend.msa.model.exceptions.UsernameExistsException;
-import backend.msa.repository.UserRepository;
-import backend.msa.services.UserService;
+import backend.model.User;
+import backend.model.enumerations.Role;
+import backend.model.exceptions.InvalidUserCredentialException;
+import backend.model.exceptions.PasswordsDoNotMatchException;
+import backend.model.exceptions.UsernameExistsException;
+import backend.repository.UserRepository;
+import backend.services.UserService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;

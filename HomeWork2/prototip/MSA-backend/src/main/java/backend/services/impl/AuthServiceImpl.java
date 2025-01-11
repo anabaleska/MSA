@@ -1,9 +1,9 @@
 package backend.services.impl;
 
 
-import backend.msa.config.JwtProvider;
-import backend.msa.model.User;
-import backend.msa.repository.UserRepository;
+import backend.config.JwtProvider;
+import backend.model.User;
+import backend.repository.UserRepository;
 import backend.services.AuthService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,7 @@ public class AuthServiceImpl implements AuthService {
             throw new RuntimeException("Invalid user credentials");
         }
         String role= user.getUsername().equals("admin") ? "ADMIN" :"USER";
-        String token = jwtProvider.createToken(email,role);  // Assuming jwtProvider is responsible for generating JWT
+        String token = jwtProvider.createToken(email,role);
         return token;
     }
 }

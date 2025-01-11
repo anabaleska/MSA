@@ -1,9 +1,9 @@
-package backend.msa.services.converter.impl;
+package backend.services.converter.impl;
 
-import backend.msa.model.TickerValues;
-import backend.msa.model.dto.TickerValuesDTO;
-import backend.msa.services.TickerService;
-import backend.msa.services.converter.TickerValuesConverterService;
+import backend.model.TickerValues;
+import backend.model.dto.TickerValuesDTO;
+import backend.services.TickerService;
+import backend.services.converter.TickerValuesConverterService;
 import org.springframework.stereotype.Service;
 
 @Service

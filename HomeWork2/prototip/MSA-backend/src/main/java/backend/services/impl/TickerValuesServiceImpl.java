@@ -1,8 +1,8 @@
-package backend.msa.services.impl;
+package backend.services.impl;
 
-import backend.msa.model.TickerValues;
-import backend.msa.repository.TickerValuesRepository;
-import backend.msa.services.TickerValuesService;
+import backend.model.TickerValues;
+import backend.repository.TickerValuesRepository;
+import backend.services.TickerValuesService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,8 @@
-package backend.msa.services.impl;
+package backend.services.impl;
 
-import backend.msa.model.TickersNews;
-import backend.msa.repository.TickersNewsRepository;
-import backend.msa.services.TickersNewsService;
+import backend.model.TickersNews;
+import backend.repository.TickersNewsRepository;
+import backend.services.TickersNewsService;
 import java.util.List;
 import java.util.stream.Collectors;
 

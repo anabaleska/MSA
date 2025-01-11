@@ -1,7 +1,7 @@
-package backend.msa.services.converter.impl;
-import backend.msa.model.TickersNews;
-import backend.msa.model.dto.TickersNewsDTO;
-import backend.msa.services.converter.TickersNewsConverterService;
+package backend.services.converter.impl;
+import backend.model.TickersNews;
+import backend.model.dto.TickersNewsDTO;
+import backend.services.converter.TickersNewsConverterService;
 import org.springframework.stereotype.Service;
 
 @Service

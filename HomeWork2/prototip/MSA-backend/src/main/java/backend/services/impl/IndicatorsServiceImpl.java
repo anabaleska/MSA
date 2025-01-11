@@ -1,7 +1,7 @@
-package backend.msa.services.impl;
-import backend.msa.model.Indicators;
-import backend.msa.repository.IndicatorsRepository;
-import backend.msa.services.IndicatorsService;
+package backend.services.impl;
+import backend.model.Indicators;
+import backend.repository.IndicatorsRepository;
+import backend.services.IndicatorsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

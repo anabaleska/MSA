@@ -1,6 +1,6 @@
 package backend.config;
 
-import backend.msa.model.enumerations.Role;
+import backend.model.enumerations.Role;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Component
 public class JwtProvider {
-    @Value("${jwt.secret}")  // Inject jwtSecret value from application.properties
+    @Value("${jwt.secret}")
     private String jwtSecret;
 
     public String createToken(String email, String role) {

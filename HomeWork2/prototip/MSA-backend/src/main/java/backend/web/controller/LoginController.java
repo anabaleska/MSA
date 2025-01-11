@@ -35,27 +35,27 @@ public class LoginController {
     @PostMapping
     public ResponseEntity<?> login(@RequestBody LoginDTO userLoginDTO) {
         try {
-            // Use the AuthService to handle login logic
+
 
             String token = authService.login(userLoginDTO.email(), userLoginDTO.password());
 
-            // If login is successful
+
             return ResponseEntity.ok(new LoginResponse(token));
         } catch (Exception ex) {
-            // If login fails
+
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login failed: " + ex.getMessage());
         }
     }
 
     private String generateJwtToken(Authentication authentication) {
         String username = authentication.getName();
-        String roles = authentication.getAuthorities().toString(); // This returns a list of roles
+        String roles = authentication.getAuthorities().toString();
 
         return Jwts.builder()
                 .setSubject(username)
-                .claim("roles", roles) // Add roles as claim
+                .claim("roles", roles)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 86400000)) // Token expires in 1 day
+                .setExpiration(new Date(System.currentTimeMillis() + 86400000))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret)
                 .compact();
     }
