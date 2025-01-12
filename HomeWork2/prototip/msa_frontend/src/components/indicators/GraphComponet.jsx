@@ -16,7 +16,7 @@ const GraphComponent = ({tickerId}) => {
         const fetchIndicators = async () => {
 
             try {
-                const response = await fetch(`http://localhost:8081/api/stock-indicators/${tickerId}`);
+                const response = await fetch(`http://backend:8081/api/stock-indicators/${tickerId}`);
                 const data = await response.json();
                 setIndicators(data);
             } catch (error) {

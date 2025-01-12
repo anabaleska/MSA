@@ -7,7 +7,7 @@ const List = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:8081/api/tickers')
+        fetch('http://backend:8081/api/tickers')
             .then(response => response.json())
             .then(data => {
                 console.log("Tickers fetched:", data);
@@ -16,7 +16,7 @@ const List = () => {
             .catch(error => console.error("Error fetching tickers:", error));
 
 
-        fetch('http://localhost:8081/api/ticker-values')
+        fetch('http://backend:8081/api/ticker-values')
             .then(response => response.json())
             .then(data => {
                 console.log("Details fetched:", data);

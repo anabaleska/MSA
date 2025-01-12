@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  database:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=anaiman
+      - POSTGRES_DB=msa_data
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./HomeWork2/prototip/MSA-backend
+    ports:
+      - "8081:8081"
+    depends_on:
+      - frontend
+      - hw1
+      - hw3
+      - microservice
+
+  frontend:
+    build:
+      context: ./HomeWork2/prototip/msa_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  hw1:
+    build:
+      context: ./Hw1,Hw3/HomeWork1
+
+  hw3:
+    build:
+      context: ./Hw1,Hw3/HomeWork3
+
+  microservice:
+    build:
+      context: ./microservice
+    ports:
+      - "8082:8082"
+volumes:
+    postgres_data:

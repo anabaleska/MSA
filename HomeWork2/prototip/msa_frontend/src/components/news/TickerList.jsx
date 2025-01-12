@@ -9,7 +9,7 @@ const TickerList = () => {
 
     useEffect(() => {
 
-        axios.get("http://localhost:8081/api/ticker-news")
+        axios.get("http://backend:8081/api/ticker-news")
             .then(response =>
             {
 

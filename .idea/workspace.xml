@@ -5,9 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76262715-1483-4e54-bb43-e375cd5bcd1a" name="Changes" comment="changes on frontend structure">
+      <change afterPath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/requirements" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/requirements" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hw4/TickerList/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MacedonianStockAnalysis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MacedonianStockAnalysis.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hw4/TickerList/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Hw4/TickerList/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/java/backend/web/controller/rest/TickerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/java/backend/web/controller/rest/TickerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/java/backend/web/controller/rest/TickerValuesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/java/backend/web/controller/rest/TickerValuesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/admin/TableHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/admin/TableHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/history/TableHistory.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/history/TableHistory.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/indicators/GraphComponet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/indicators/GraphComponet.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/news/TickerList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/news/TickerList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/config/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/Predictions.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/Predictions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/db_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/db_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/fetch-full-names.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/fetch_full_names.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/sentiment-analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/sentiment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/tech-indicators.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/indicators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hw4/TickerList/src/main/java/mk/ukim/finki/tickerlist/web/rest/TickerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hw4/TickerList/src/main/java/mk/ukim/finki/tickerlist/web/rest/TickerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +55,12 @@
     &quot;assignee&quot;: &quot;iimosh&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/anabaleska/MSA.git&quot;,
-    &quot;accountId&quot;: &quot;bc20e07b-caea-438a-9e97-3500a6bb6e0e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/anabaleska/MSA.git",
+    "accountId": "e9872f69-19fa-4438-bd06-65fafc449323"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -44,21 +69,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.filter_two.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.tech-indicators.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hw4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.filter_two.executor": "Debug",
+    "Python.main.executor": "Debug",
+    "Python.tech-indicators.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "hw4",
+    "last_opened_file_path": "C:/Users/User/Desktop/MacedonianStockAnalysis",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,6 +105,7 @@
       <workItem from="1735757980064" duration="55000" />
       <workItem from="1736623676626" duration="3371000" />
       <workItem from="1736629033540" duration="2771000" />
+      <workItem from="1736710597447" duration="2730000" />
     </task>
     <task id="LOCAL-00001" summary="workspace">
       <option name="closed" value="true" />

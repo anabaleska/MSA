@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Page;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://frontend:3000"})
 @RestController
 @RequestMapping("/api/ticker-values")
 public class TickerValuesController {

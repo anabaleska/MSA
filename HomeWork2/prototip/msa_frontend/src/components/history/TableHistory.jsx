@@ -9,7 +9,7 @@ const TableHistory = () => {
     const [totalPages, setTotalPages] = useState(0);
 
     const fetchPage = (currentPage) => {
-        fetch(`http://localhost:8081/api/ticker-values?page=${currentPage}&size=20`)
+        fetch(`http://backend:8081/api/ticker-values?page=${currentPage}&size=20`)
             .then((response) => response.json())
             .then((data) => {
                 console.log("Details fetched:", data);

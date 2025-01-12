@@ -11,7 +11,7 @@ class DatabaseConnectionSingleton:
         if cls._engine is None:
             with cls._lock:
                 if cls._engine is None:
-                    DATABASE_URL = "postgresql+psycopg2://postgres:anaiman@localhost:5432/msa_data"
+                    DATABASE_URL = "postgresql+psycopg2://postgres:anaiman@database:5432/msa_data"
                     cls._engine = create_engine(DATABASE_URL)
         return cls._engine
 

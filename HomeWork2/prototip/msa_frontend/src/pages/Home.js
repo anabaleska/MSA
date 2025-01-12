@@ -12,7 +12,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:8081/api/tickers')
+        fetch('http://backend:8081/api/tickers')
             .then(response => response.json())
             .then(data => {
                 console.log("Tickers fetched:", data);
