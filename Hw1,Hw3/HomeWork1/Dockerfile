@@ -5,5 +5,5 @@ FROM python:3.9-slim
 #    && rm -rf /var/lib/apt/lists/*
 WORKDIR /hw1
 COPY . /hw1
-#RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 CMD [ "python", "main.py" ]

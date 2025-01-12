@@ -1,6 +1,8 @@
-psycopg2
+psycopg2-binary
 requests
 beautifulsoup4
 aiohttp
 pandas
-python-dotenv
+sqlalchemy
+transformers
+ta
