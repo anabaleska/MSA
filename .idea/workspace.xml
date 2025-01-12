@@ -4,35 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76262715-1483-4e54-bb43-e375cd5bcd1a" name="Changes" comment="changes on frontend structure">
-      <change afterPath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/requirements" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/requirements" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hw4/TickerList/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MacedonianStockAnalysis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MacedonianStockAnalysis.iml" afterDir="false" />
+    <list default="true" id="76262715-1483-4e54-bb43-e375cd5bcd1a" name="Changes" comment="added dockerfiles and docker-compose">
+      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/java/backend/web/controller/rest/TickerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/java/backend/web/controller/rest/TickerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/java/backend/web/controller/rest/TickerValuesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/java/backend/web/controller/rest/TickerValuesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/MSA-backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/admin/TableHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/admin/TableHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/history/TableHistory.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/history/TableHistory.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/indicators/GraphComponet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/indicators/GraphComponet.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/news/TickerList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/components/news/TickerList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/Predictions.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/src/pages/Predictions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/db_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/db_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/fetch-full-names.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/fetch_full_names.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/sentiment-analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/sentiment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/tech-indicators.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork3/indicators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hw4/TickerList/src/main/java/mk/ukim/finki/tickerlist/web/rest/TickerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hw4/TickerList/src/main/java/mk/ukim/finki/tickerlist/web/rest/TickerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/HomeWork2/prototip/msa_frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Hw1,Hw3/HomeWork1/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +59,7 @@
     "Python.tech-indicators.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "hw4",
-    "last_opened_file_path": "C:/Users/User/Desktop/MacedonianStockAnalysis",
+    "last_opened_file_path": "C:/Users/User/Desktop/MacedonianStockAnalysis/Hw1,Hw3/HomeWork1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,6 +68,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\MacedonianStockAnalysis\Hw1,Hw3\HomeWork1" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -105,7 +93,7 @@
       <workItem from="1735757980064" duration="55000" />
       <workItem from="1736623676626" duration="3371000" />
       <workItem from="1736629033540" duration="2771000" />
-      <workItem from="1736710597447" duration="2730000" />
+      <workItem from="1736710597447" duration="4941000" />
     </task>
     <task id="LOCAL-00001" summary="workspace">
       <option name="closed" value="true" />
@@ -155,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736629457762</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added dockerfiles and docker-compose">
+      <option name="closed" value="true" />
+      <created>1736713680589</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736713680589</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +175,8 @@
     <MESSAGE value="modified MVC pattern and added Singleton pattern" />
     <MESSAGE value="deleted comments on the frontend" />
     <MESSAGE value="changes on frontend structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes on frontend structure" />
+    <MESSAGE value="added dockerfiles and docker-compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dockerfiles and docker-compose" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

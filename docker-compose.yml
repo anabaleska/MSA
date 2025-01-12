@@ -18,7 +18,7 @@ services:
     ports:
       - "8081:8081"
     depends_on:
-      - frontend
+#      - frontend
       - hw1
       - hw3
       - microservice
@@ -41,7 +41,7 @@ services:
 
   microservice:
     build:
-      context: ./microservice
+      context: ./Hw4/TickerList
     ports:
       - "8082:8082"
 volumes:
