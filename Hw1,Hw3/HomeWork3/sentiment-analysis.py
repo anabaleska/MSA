@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from transformers import pipeline
 from config import DB_CONFIG
 
+
 def get_news_pages():
     for page_num in range(1, 6):
         url = f"https://www.mse.mk/mk/news/latest/{page_num}"
